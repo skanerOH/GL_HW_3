@@ -20,12 +20,14 @@ void BucketSort::Add(double element)
 void BucketSort::PrintResult()
 {
     int maxColl=INT32_MIN;
+    int currSize;
     std::list<double>::iterator iter;
     for (int i=0; i<intervalCount; ++i)
     {
         buckets[i].sort();
-        if (buckets[i].size()>maxColl)
-            maxColl=buckets[i].size();
+        cuurSize=buckets[i].size();
+        if (currSize>maxColl)
+            maxColl=currSize;
         for (iter=buckets[i].begin(); iter!=buckets[i].end(); ++iter)
         {
             std::cout << *iter << ' ';
