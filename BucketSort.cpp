@@ -19,12 +19,12 @@ void BucketSort::Add(double element)
 
 void BucketSort::PrintResult()
 {
-    int maxColl=INT32_MAX;
+    int maxColl=INT32_MIN;
     std::list<double>::iterator iter;
     for (int i=0; i<intervalCount; ++i)
     {
         buckets[i].sort();
-        if (buckets[i].size()<maxColl)
+        if (buckets[i].size()>maxColl)
             maxColl=buckets[i].size();
         for (iter=buckets[i].begin(); iter!=buckets[i].end(); ++iter)
         {
