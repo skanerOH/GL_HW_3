@@ -25,7 +25,7 @@ void BucketSort::PrintResult()
     for (int i=0; i<intervalCount; ++i)
     {
         buckets[i].sort();
-        cuurSize=buckets[i].size();
+        currSize=buckets[i].size();
         if (currSize>maxColl)
             maxColl=currSize;
         for (iter=buckets[i].begin(); iter!=buckets[i].end(); ++iter)
