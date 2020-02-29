@@ -1,14 +1,13 @@
 #include <iostream>
 #include <list>
+#include <vector>
 
 class BucketSort
 {
     const int intervalCount=101;
-    std::list<double>* buckets;
+    std::vector<std::list<double>> buckets;
 public:
     BucketSort();
-
-    ~BucketSort();
 
     void Add(double);
 
